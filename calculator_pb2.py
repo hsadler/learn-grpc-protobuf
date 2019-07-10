@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x10\x63\x61lculator.proto\"\x17\n\x06Number\x12\r\n\x05value\x18\x01 \x01(\x02\x32.\n\nCalculator\x12 \n\nSquareRoot\x12\x07.Number\x1a\x07.Number\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x10\x63\x61lculator.proto\"\x17\n\x06Number\x12\r\n\x05value\x18\x01 \x01(\x02\"$\n\nTwoNumbers\x12\n\n\x02n1\x18\x01 \x01(\x02\x12\n\n\x02n2\x18\x02 \x01(\x02\x32M\n\nCalculator\x12 \n\nSquareRoot\x12\x07.Number\x1a\x07.Number\"\x00\x12\x1d\n\x03\x41\x64\x64\x12\x0b.TwoNumbers\x1a\x07.Number\"\x00\x62\x06proto3')
 )
 
 
@@ -56,7 +56,46 @@ _NUMBER = _descriptor.Descriptor(
   serialized_end=43,
 )
 
+
+_TWONUMBERS = _descriptor.Descriptor(
+  name='TwoNumbers',
+  full_name='TwoNumbers',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='n1', full_name='TwoNumbers.n1', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='n2', full_name='TwoNumbers.n2', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=45,
+  serialized_end=81,
+)
+
 DESCRIPTOR.message_types_by_name['Number'] = _NUMBER
+DESCRIPTOR.message_types_by_name['TwoNumbers'] = _TWONUMBERS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Number = _reflection.GeneratedProtocolMessageType('Number', (_message.Message,), {
@@ -66,6 +105,13 @@ Number = _reflection.GeneratedProtocolMessageType('Number', (_message.Message,),
   })
 _sym_db.RegisterMessage(Number)
 
+TwoNumbers = _reflection.GeneratedProtocolMessageType('TwoNumbers', (_message.Message,), {
+  'DESCRIPTOR' : _TWONUMBERS,
+  '__module__' : 'calculator_pb2'
+  # @@protoc_insertion_point(class_scope:TwoNumbers)
+  })
+_sym_db.RegisterMessage(TwoNumbers)
+
 
 
 _CALCULATOR = _descriptor.ServiceDescriptor(
@@ -74,8 +120,8 @@ _CALCULATOR = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=45,
-  serialized_end=91,
+  serialized_start=83,
+  serialized_end=160,
   methods=[
   _descriptor.MethodDescriptor(
     name='SquareRoot',
@@ -83,6 +129,15 @@ _CALCULATOR = _descriptor.ServiceDescriptor(
     index=0,
     containing_service=None,
     input_type=_NUMBER,
+    output_type=_NUMBER,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Add',
+    full_name='Calculator.Add',
+    index=1,
+    containing_service=None,
+    input_type=_TWONUMBERS,
     output_type=_NUMBER,
     serialized_options=None,
   ),

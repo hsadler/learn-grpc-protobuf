@@ -21,6 +21,12 @@ class CalculatorServicer(calculator_pb2_grpc.CalculatorServicer):
         response.value = calculator.square_root(request.value)
         return response
 
+    # same for calculator.add
+    def Add(self, request, context):
+        response = calculator_pb2.Number()
+        response.value = calculator.add(request.n1, request.n2)
+        return response
+
 
 # create a gRPC server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

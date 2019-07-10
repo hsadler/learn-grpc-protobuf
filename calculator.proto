@@ -5,6 +5,12 @@ message Number {
 	float value = 1;
 }
 
+message TwoNumbers {
+	float n1 = 1;
+	float n2 = 2;
+}
+
 service Calculator {
 	rpc SquareRoot(Number) returns (Number) {}
+	rpc Add(TwoNumbers) returns (Number) {}
 }
