@@ -46,7 +46,8 @@ python client.py
 ```
 you should see this output:
 ```sh
-4.0
+result of square_root(16):  4.0
+result of add(4,5):  9.0
 ```
 
 ## Cleanup
