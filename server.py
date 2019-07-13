@@ -49,6 +49,12 @@ calculator_pb2_grpc.add_CalculatorServicer_to_server(
 	server
 )
 
+hello_pb2_grpc.add_HelloServicer_to_server(
+	HelloServicer(),
+	server
+)
+
+
 # listen on port 50051
 print('Starting server. Listening on port 50051.')
 server.add_insecure_port('[::]:50051')
