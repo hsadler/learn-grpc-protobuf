@@ -21,6 +21,10 @@ start virtualenv
 ```sh
 source venv/bin/activate
 ```
+change to app directory
+```sh
+cd app/
+```
 install python packages
 ```sh
 pip install -r requirements.txt
@@ -39,11 +43,21 @@ spin-up gRPC server
 python server.py
 ```
 
+### OR.. Spin-up Python gRPC Server Container via Docker
+```sh
+docker build -t=learn-grpc-protobuf
+docker run -p 50051:50051 learn-grpc-protobuf
+```
+
 ### Run Client Script
 
 in another terminal, start virtualenv
 ```sh
 source venv/bin/activate
+```
+change to app directory
+```sh
+cd app/
 ```
 make a request to the gRPC server via the client script
 ```sh
