@@ -8,14 +8,14 @@ Learning gRPC and protocol buffers based on [this](https://www.semantics3.com/bl
 
 # Usage
 
-## Virtualenv
+### Virtualenv
 
 create virtual environment directory for python
 ```sh
 virtualenv venv
 ```
 
-## Spin-up Python gRPC Server
+### Spin-up Python gRPC Server
 
 start virtualenv
 ```sh
@@ -39,7 +39,7 @@ spin-up gRPC server
 python server.py
 ```
 
-## Run Client Script
+### Run Client Script
 
 in another terminal, start virtualenv
 ```sh
@@ -56,7 +56,7 @@ result of add(4,5):  9.0
 result of say_hello(My name is Harry): Hello, your request message was: My name is Harry
 ```
 
-## Cleanup
+### Cleanup
 
 spin-down python gRPC server in 1st terminal
 ```sh
