@@ -1,10 +1,10 @@
 
 syntax = "proto3";
 
-message Message {
-	string text = 1;
-}
-
 service Hello {
 	rpc SayHello(Message) returns (Message) {}
+}
+
+message Message {
+	string text = 1;
 }
