@@ -12,10 +12,10 @@ channel = grpc.insecure_channel('localhost:50051')
 stub = hello_pb2_grpc.HelloStub(channel)
 
 # create a request
-message_text = 'My name is Harry'
+message_text = 'GAAAARRRRRYYYYYYYY!!!'
 message = hello_pb2.Message(text=message_text)
 
 # make call to server
 res = stub.SayHello(message)
-print(f'result of say_hello({message_text}): {res.text}')
+print(f'gRPC server response text ========> {res.text}')
 
